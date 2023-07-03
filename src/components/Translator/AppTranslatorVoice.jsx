@@ -10,7 +10,6 @@ export default function AppTranslatorVoice() {
 
     // console.log(text)
     useEffect(() => {
-        // console.log("useEffect")
     }, [text])
 
     // // Init SpeechSynth API
@@ -141,10 +140,10 @@ export default function AppTranslatorVoice() {
 
             <button>speak</button>
 
-            <img 
-            scr={wave} 
-            className='wave' 
-            alt=''
+            <img
+                scr={wave}
+                className='wave'
+                alt=''
             ></img>
         </form>
     )
