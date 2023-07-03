@@ -9,7 +9,7 @@ export default function AppTranslator() {
             <h1>Comment s'est passée ta journée?</h1>
             <AppTranslatorCreateNewButton0 />
             <AppTranslatorVoice />
-            <a href="https://github.com/will-s-205/login" target='_blank' rel="noreferrer" className='footer'>by William Step</a>
+            <a href="https://github.com/will-s-205/translate-helper" target='_blank' rel="noreferrer" className='footer'>by William Step</a>
         </div>
     )
 }
