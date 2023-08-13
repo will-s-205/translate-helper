@@ -1,5 +1,3 @@
-// LOCAL STORAGE // https://scrimba.com/learn/learnreact/notes-app-sync-notes-with-localstorage-co3c5495b8d7949e81b79988a
-// JOKES // Hide or show elements // https://scrimba.com/learn/learnreact/conditional-rendering--co00d4a3c9a328b5ff96f418e
 import { nanoid } from 'nanoid';
 import './AppTranslator.scss';
 import { useEffect, useState } from 'react';
@@ -24,18 +22,10 @@ export default function AppTranslatorCreateNewButton() {
     }
 
     useEffect(() => {
-        // console.log(elements)
         readTitle()
     }, [
-        // elements
         staleVoice
     ])
-
-    // const deleteByIndex = index => {
-    //     setElements(oldValues => {
-    //         return oldValues.filter((_, i) => i !== index)
-    //     })
-    // }
 
     const deleteByName = name => {
         setElements(oldValues => {
@@ -43,26 +33,6 @@ export default function AppTranslatorCreateNewButton() {
         })
         console.log(name)
     }
-
-    // // delete one item by id
-    // const deleteById2 = id => {
-    //     setElements(oldValues => {
-    //         return oldValues.filter(data => data.id !== id)
-    //     })
-    // }
-
-    // // choose one item only
-    // const keepOnlyOneItemById2 = id => {
-    //     setElements(oldValues => {
-    //         return oldValues.filter(data => data.id == id)
-    //     })
-    // }
-
-    // const deleteByValue = (value) => {
-    //     setElements(oldValues => {
-    //         return oldValues.filter(data => data !== value)
-    //     })
-    // }
 
     const newButton =
         <button
@@ -114,17 +84,6 @@ export default function AppTranslatorCreateNewButton() {
             day
         </button>
 
-    // function forEachKey() {
-    //     for (let i = 0; i < elements.length; i++) {
-    //         if (i % 2 === 1) {
-    //             console.log(elements[i].name);
-    //         }
-    //     }
-    // }
-
-    // const names = Object.keys(elements)
-    // const entries = Object.entries(elements)
-    // const values = Object.values(elements)
     const values1 = Object.values(elements)[1]
     const values3 = Object.values(elements)[3]
     const values5 = Object.values(elements)[5]
@@ -133,8 +92,6 @@ export default function AppTranslatorCreateNewButton() {
 
     const button5 =
         <button
-            // onClick={() => console.log(forEachKey())}
-            // onClick={() => console.log(values1.name)}
 
             className='check-button'
             onClick={(e) => {
@@ -142,20 +99,12 @@ export default function AppTranslatorCreateNewButton() {
                 let confirm = []
 
                 if (elements.length > 1 && values1.name === "How") {
-                    // console.log(values1.name)
-                    // console.log("How!")
                     confirm.push("How")
                 } if (elements.length > 3 && values3.name === "was" && values1.name !== null) {
-                    // console.log(values3.name)
-                    // console.log("was!")
                     confirm.push("was")
                 } if (elements.length > 5 && values5.name === "your" && values1.name !== null) {
-                    // console.log(values5.name)
-                    // console.log("your!")
                     confirm.push("your")
                 } if (elements.length > 7 && values7.name === "day" && values1.name !== null) {
-                    // console.log(values7.name)
-                    // console.log("day!")
                     confirm.push("day")
                 }
 
@@ -177,8 +126,6 @@ export default function AppTranslatorCreateNewButton() {
                 speechSynthesis.speak(utterance)
 
                 if (elements.length < 2 || elements.length > 8) {
-                    // console.log(values9.name)
-                    // console.log("Wrong number of words!")
                     confirm.push("Wrong amount of words")
                 }
                 console.log(confirm)
@@ -200,7 +147,6 @@ export default function AppTranslatorCreateNewButton() {
             <h2>Write in English:</h2>
 
             <div className='container2'>
-                {/* <h2>Container 3</h2> */}
                 {newButton}
                 {newButton2}
                 {newButton3}
@@ -208,7 +154,6 @@ export default function AppTranslatorCreateNewButton() {
             </div>
 
             <div className='container3'>
-                {/* <h2>Container 4</h2> */}
                 {
                     elements.map((element, index) =>
                         <div
@@ -224,8 +169,3 @@ export default function AppTranslatorCreateNewButton() {
         </div>
     )
 }
-
-// if element is exist by id or name
-    // do not create more
-
-    // Code refactoring - move voice features to the specific component
