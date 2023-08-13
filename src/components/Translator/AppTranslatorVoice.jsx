@@ -70,13 +70,8 @@ export default function AppTranslatorVoice() {
     // Running functions on submit
     function handleSubmit(e) {
         e.preventDefault();
-        // console.log(text.text)
-        // console.log(voices)
-        // console.log(voices[0].default) // default tells if languge is selected
-        // console.log(voices[0].name) // default tells if languge is selected
 
         speak();
-
         // OR
         // let utteranceInit = new SpeechSynthesisUtterance(text.text)
         // utteranceInit.lang = "fr-FR";
@@ -87,8 +82,6 @@ export default function AppTranslatorVoice() {
     function handleChange(event) {
         const { name, value } = event.target
         setText(prevRec => {
-            // console.log(event.target.text)
-            // console.log(event.target)
             return {
                 ...prevRec,
                 id: nanoid(),
@@ -99,17 +92,14 @@ export default function AppTranslatorVoice() {
 
     // Getting element by clicking on it
     const handleSelect = (event) => {
-        // console.log(event.target.value)
         const selectedOption = event.target.value
         setLang(selectedOption)
     }
-    // console.log("handleSelect -8 SLICE - "+lang.slice(0, -8))
 
     return (
         <form className='speak-wrapper'
             onSubmit={handleSubmit}
         >
-            {/* Start typing your text here and then choose a language to read the text for you */}
             <textarea
                 className='textarea'
                 placeholder='text-to-voice here'
@@ -120,7 +110,6 @@ export default function AppTranslatorVoice() {
 
             <div className="form-group">
                 <select
-                    // id="voice-select"
                     value={lang}
                     onChange={handleSelect}
                     name="lang"
