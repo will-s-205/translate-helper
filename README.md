@@ -1,5 +1,3 @@
-https://will-s-205.github.io/translate-helper
-
 # Translate Helper
 ### Click project live below:
 [![Translate Helper cover](https://raw.githubusercontent.com/will-s-205/will-s-205.github.io/main/fcc-portfolio/img/2023-07-02%20Translate%20Helper.jpg)](https://will-s-205.github.io/translate-helper)
